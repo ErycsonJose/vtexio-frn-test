@@ -6,6 +6,7 @@ query SearchProducts($selectedFacets: [SelectedFacetInput],$orderBy: String,$fro
       productId
       productName
       link
+      linkText
       brand
       items {
         name

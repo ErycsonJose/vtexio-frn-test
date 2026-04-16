@@ -5,6 +5,7 @@ query ProductsByIdentifier($field: ProductUniqueIdentifierField!,$values: [ID!])
       productId
       productName
       link
+      linkText
       brand
       items {
         name
