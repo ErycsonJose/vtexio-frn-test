@@ -1,0 +1,55 @@
+{
+  "name": "common",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "lint": "eslint --ext js,jsx,ts,tsx . --fix",
+    "format": "prettier --write \"**/*.{ts,js,json}\"",
+    "dev": "gulp common",
+    "install:all": "concurrently \"cd react && yarn install\"",
+    "lint:format": "yarn lint && yarn format"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js,tsx,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,graphql,gql}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "@vtex/prettier-config": "1.0.0",
+    "eslint": "^8.23.0",
+    "eslint-config-vtex": "15.0.1",
+    "eslint-config-vtex-react": "^9.0.1",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.23.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "glob": "^8.0.3",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "husky": "^8.0.1",
+    "lint-staged": "13.0.3",
+    "prettier": "2.7.1",
+    "sass": "^1.51.0",
+    "typescript": "4.8.2"
+  },
+  "version": "0.0.1",
+  "author": "agencia m3",
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "@types/react": "^16.9.31",
+    "react-player": "^2.16.0",
+    "react-responsive": "^10.0.1",
+    "react-compound-timer": "^2.0.5"
+  }
+}

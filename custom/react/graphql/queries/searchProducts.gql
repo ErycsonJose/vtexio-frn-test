@@ -1,0 +1,41 @@
+query SearchProducts($selectedFacets: [SelectedFacetInput],$orderBy: String,$from: Int,$to:Int,$hideUnavailableItems:Boolean) {
+  productSearch(selectedFacets: $selectedFacets,orderBy:$orderBy,from:$from,to:$to,hideUnavailableItems:$hideUnavailableItems )
+    @context(provider: "vtex.search-graphql") {
+    products {
+      cacheId
+      productId
+      productName
+      link
+      brand
+      items {
+        name
+        itemId
+        images {
+          imageUrl
+          imageTag
+          imageLabel
+        }
+        variations {
+          name
+          values
+        }
+        sellers {
+          sellerId
+          sellerName
+          commertialOffer {
+            Installments(criteria: MAX) {
+              Value
+              NumberOfInstallments
+              Name
+            }
+            AvailableQuantity
+            Price
+            PriceWithoutDiscount
+            ListPrice
+            taxPercentage
+          }
+        }
+      }
+    }
+  }
+}

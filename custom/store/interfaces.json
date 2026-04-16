@@ -1,0 +1,19 @@
+{
+    "custom-example": {
+        "component": "Example"
+    },
+    "custom-promotions": {
+        "allowed": [
+            "product-summary"
+        ],
+        "component": "Promotions",
+        "composition": "children",
+        "preview": {
+            "type": "grid",
+            "height": 485
+        },
+        "content": {
+            "$ref": "app:frncubo.custom-components#/definitions/CustomPromotions"
+        }
+    }
+}

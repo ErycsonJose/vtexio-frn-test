@@ -1,0 +1,113 @@
+{
+  "store.orderplaced": {
+    "blocks": ["order-placed"]
+  },
+
+  "store.account": {
+    "blocks": ["my-account"],
+    "parent": {
+      "challenge": "challenge.profile"
+    }
+  },
+
+  "store.login": {
+    "blocks": ["login-content#default"]
+  },
+
+  "login-content#default": {
+    "props": {
+      "isInitialScreenOptionOnly": false,
+      "defaultOption": 1,
+      "showPasswordVerificationIntoTooltip": true
+    }
+  },
+
+  "product-summary.shelf": {
+    "children": [
+        "flex-layout.col#cardColImg",
+        "flex-layout.col#cardColInfo"
+    ]
+},
+"flex-layout.col#cardColImg":{
+    "children":[
+        "stack-layout#cardColImg",
+        "flex-layout.row#shelfBtnContainer"
+    ],
+    "props":{
+        "blockClass":"cardColImg"
+    }
+  },
+  "stack-layout#cardColImg":{
+    "children":[
+        "product-summary-image",
+        "vtex.product-highlights@2.x:product-highlights"
+    ],
+    "props":{
+        "blockClass":"cardColImgStack"
+    }
+  },
+  "product-summary-image":{
+    "props":{
+        "aspectRatio":"1:1",
+        "height":"268"
+    }
+  },
+  "vtex.product-highlights@2.x:product-highlights": {
+    "props": {
+      "type": "collection",
+      "filter": {
+        "type": "show",
+        "highlightNames": ["Lançamentos","NOVO!"]
+      }
+    },
+    "children": ["product-highlight-text"]
+  },
+  "product-highlight-text": {
+    "props": {
+      "message": "{highlightName}"
+    }
+  },
+
+  "flex-layout.col#cardColInfo":{
+    "children":[
+        "product-summary-brand",
+        "product-summary-name",
+        "product-summary-quantity",
+        "product-summary-space",
+        "flex-layout.row#priceGroup",
+        "product-installments#shelf-installments"
+    ]
+  },
+  "flex-layout.row#priceGroup":{
+    "children":[
+        "product-list-price",
+        "product-selling-price"
+    ],
+    "props":{
+        "blockClass": "priceGroup"
+    }
+  },
+  "product-installments#shelf-installments":{
+    "props":{
+        "message": "ou {installmentsNumber} de {installmentValue} sem juros",
+        "blockClass":"shelf-intallments"
+    }
+  },
+  "flex-layout.row#shelfBtnContainer":{
+    "children":[
+        "add-to-list-btn",
+        "modal-trigger#quickview"
+    ],
+    "props":{
+        "blockClass":"shelfBtnContainer"
+    }
+  },
+  "product-summary-quantity":{
+    "props":{
+        "warningQuantityThreshold":1,
+        "showUnit":false,
+        "showLabel":false,
+        "quantitySelectorStep":"singleUnit"
+    }
+  }
+}

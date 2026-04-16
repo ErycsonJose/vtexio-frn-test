@@ -1,0 +1,49 @@
+.containerNormal{
+   border-radius: 0;
+    display: flex;
+    position: relative;
+    max-width: 270px !important;
+    width: 100%;
+}
+.element{
+    padding: 0 0 .75rem;
+    max-width: 270px;
+    width: 100%;
+}
+.productNameContainer {
+    font-size: .813rem;
+    width: 100%;
+    overflow: hidden;
+    height: 45px;
+}
+.nameContainer {
+    margin: 0;
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-start;
+}
+.productBrandName{
+    color: #b9b9b9;
+    font-size: .813rem;
+    font-weight: 700;
+}
+
+.productBrand{
+   color: #b9b9b9;
+    font-size: .813rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+@media screen and (min-width: 1024px) {
+    .element {
+        &:hover {
+            :global(.vtex-flex-layout-0-x-flexRow--shelfBtnContainer) {
+                display: block;
+                transition: 1s;
+            }
+            .imageWrapper {
+                opacity: .5;
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.flexRow--shelfBtnContainer {
+    display: none;
+    background: transparent;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25%;
+    transition: 1s;
+}
+.flexRowContent--shelfBtnContainer {
+   justify-content: space-evenly;
+    margin: 0 auto;
+    width: 60%;
+
+    .stretchChildrenWidth {
+        width: auto !important;
+    }
+}
+.flexCol--cardColImg {
+    margin-bottom: 7px;
+}
+.flexColChild--cardColImg {
+    :global(.vtex-button) {
+        background-color: #fff;
+        border: 0;
+        box-shadow: 5px 8.7px 16px 0 rgba(0, 0, 0, .5);
+        border-radius: 50%;
+        height: 60px;
+        width: 60px;
+        z-index: 1;
+    }
+    :global(.vtex-button__label){
+        padding: 0 !important;
+    }
+}
+.flexRow--priceGroup {
+   margin-top: 10px;
+    margin-bottom: 10px;
+    height: 100%;
+}
+.flexRowContent--priceGroup{
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}

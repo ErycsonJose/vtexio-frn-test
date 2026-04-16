@@ -1,0 +1,65 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "2.9.11",
+    "@types/react-input-mask": "^3.0.0",
+    "@vtex/css-handles": "^1.0.0",
+    "axios": "^0.27.2",
+    "cep-promise": "^4.1.0",
+    "classnames": "^2.2.6",
+    "ramda": "^0.26.1",
+    "react": "^16.12.0",
+    "react-apollo": "^3.1.3",
+    "react-dom": "^16.12.0",
+    "react-hook-form": "7.51.3",
+    "react-input-mask": "^2.0.4",
+    "react-intl": "3",
+    "react-player": "^2.16.0",
+    "react-responsive": "^10.0.0",
+    "react-toastify": "^9.1.3"
+  },
+  "devDependencies": {
+    "@apollo/react-testing": "3",
+    "@ngneat/falso": "^6.1.0",
+    "@types/classnames": "^2.2.7",
+    "@types/jest": "27.x",
+    "@types/node": "^12.7.5",
+    "@types/prop-types": "^15.7.0",
+    "@types/ramda": "^0.26.5",
+    "@types/react": "^16.9.31",
+    "@types/yup": "^0.29.11",
+    "@vtex/order-manager": "^0.5.4-beta.0",
+    "@vtex/tsconfig": "^0.4.4",
+    "apollo-cache-inmemory": "^1.6.5",
+    "apollo-client": "^2.5.1",
+    "graphql": "^14.6.0",
+    "jest": "27.x",
+    "ts-jest": "27.x",
+    "typescript": "3.9.7",
+    "vtex.pixel-manager": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.pixel-manager@1.9.0/public/@types/vtex.pixel-manager",
+    "vtex.product-summary": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-summary@2.82.0/public/@types/vtex.product-summary",
+    "vtex.structured-data": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.structured-data@0.11.0/public/@types/vtex.structured-data",
+    "vtex.product-context": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-context@0.10.1/public/@types/vtex.product-context",
+    "vtex.search-graphql": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-graphql@0.50.0/public/@types/vtex.search-graphql",
+    "vtex.device-detector": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.device-detector@0.2.6/public/@types/vtex.device-detector",
+    "vtex.rich-text": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.rich-text@0.16.0/public/@types/vtex.rich-text"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "jsdom",
+    "transform": {
+      "^.+\\.ts?$": "ts-jest"
+    },
+    "displayName": {
+      "name": "common",
+      "color": "green"
+    },
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ]
+  }
+}

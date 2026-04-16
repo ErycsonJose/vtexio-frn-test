@@ -1,0 +1,213 @@
+.container {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 auto 16px auto;
+  max-width: 1200px;
+}
+
+.headerTexts {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.headerTexts .paragraph {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.563rem;
+    line-height: 1.5;
+    color: #c3d153;
+    margin:0px 0px 30px
+}
+.headerTexts .paragraph .strong {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #2e2213;
+    letter-spacing: -0.9px;
+    line-height: 1.5rem;
+    display: block;
+    width: 100%;
+}
+
+.tabListWrapper {
+  flex-shrink: 0;
+  width: calc(3 * 170px);
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #c3d153 transparent;
+}
+
+.tabListWrapper::-webkit-scrollbar {
+  height: 1px;
+}
+
+.tabListWrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tabListWrapper::-webkit-scrollbar-thumb {
+  background-color: #c3d153;
+  border-radius: 999px;
+}
+.tabListWrapper::-webkit-scrollbar-button{
+    display: none;
+    height: 0;
+    width: 0;
+}
+
+.tabList {
+  display: flex;
+  gap: 1px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  width: max-content;
+}
+
+.tabList::-webkit-scrollbar {
+  display: none;
+}
+
+.tab {
+    background-color: rgb(246, 246, 246);
+    color: rgb(140, 140, 140);
+    font-size: 0.813rem;
+    font-weight: 700;
+    text-transform: none;
+    position: relative;
+    height: 50px;
+    width: 170px;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    border-radius: 0px;
+    cursor: pointer;
+    white-space: nowrap;
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+}
+
+.tabActive::after,
+.tab:hover:after {
+    content: "";
+    background-color: rgb(195, 209, 83);
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 2px;
+    width: 30px;
+    margin: auto;
+}
+
+.tabPanel {
+  width: 100%;
+}
+
+@media screen and (max-width: 1023px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tabListWrapper {
+    width: 100%;
+    flex-shrink: 1;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .tabListWrapper {
+    width: calc(3 * 170px);
+    flex-shrink: 0;
+  }
+}
+
+.tabSkeletonContainer {
+  width: 100%;
+  max-width: 1200px;
+  max-height: 494px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+@keyframes shimmer {
+  0% { background-position: -600px 0; }
+  100% { background-position: 600px 0; }
+}
+
+.skeletonShimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 600px 100%;
+  animation: shimmer 1.4s infinite linear;
+}
+
+.skeletonContainer {
+  width: 100%;
+  max-width: 1200px;
+  max-height: 650px;
+  overflow: hidden;
+}
+
+.skeletonTabList {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+}
+
+.skeletonTab {
+  composes: skeletonShimmer;
+  width: 120px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.skeletonGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 212px));
+}
+
+.skeletonCard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skeletonImage {
+  composes: skeletonShimmer;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 4px;
+}
+
+.skeletonLine {
+  composes: skeletonShimmer;
+  width: 80%;
+  height: 14px;
+  border-radius: 4px;
+}
+
+.skeletonLineShort {
+  composes: skeletonShimmer;
+  width: 55%;
+  height: 14px;
+  border-radius: 4px;
+}
+
+.skeletonPrice {
+  composes: skeletonShimmer;
+  width: 40%;
+  height: 18px;
+  border-radius: 4px;
+}
+@media screen and (min-width:1024px){
+    .skeletonGrid {
+        gap: 16px;
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "name": "frn-template",
+    "version": "0.0.1",
+    "private": true,
+    "license": "UNLICENSED",
+    "scripts": {
+        "vlink:custom": "cd custom && vtex link",
+        "vlink:storetheme": "cd storetheme && vtex link",
+        "vlink:services": "cd services && vtex link",
+        "vlink:storetheme:build": "cd storetheme && yarn dev",
+        "vfix:custom": "cd custom && vtex unlink && vtex link",
+        "vfix:storetheme": "cd storetheme && vtex unlink && vtex link",
+        "vfix:services": "cd services && vtex unlink && vtex link",
+        "vlink": "concurrently \"yarn vlink:custom\" \"yarn vlink:storetheme\" \"yarn vlink:storetheme:build\"",
+        "vfix": "concurrently \"yarn vfix:custom\" \"yarn vfix:storetheme\" \"yarn vlink:storetheme:build\"",
+        "lint:storetheme": "yarn workspace storetheme lint",
+        "lint:custom": "yarn workspace custom lint",
+        "lint": "yarn lint:custom && lint:storetheme",
+        "postinstall": "cd custom && yarn install:all"
+    },
+    "workspaces": [
+        "custom",
+        "services",
+        "storetheme"
+    ],
+    "devDependencies": {
+        "concurrently": "^6.0.0",
+        "lerna": "^4.0.0",
+        "lint-staged": "^10.5.4"
+    },
+    "packageManager": "yarn@1.22.19"
+}

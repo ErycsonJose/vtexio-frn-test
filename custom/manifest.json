@@ -1,0 +1,33 @@
+{
+  "vendor": "frncubo",
+  "name": "custom-components",
+  "version": "0.0.0",
+  "title": "custom-components",
+  "description": "custom components",
+  "defaultLocale": "pt-BR",
+  "builders": {
+    "store": "0.x",
+    "react": "3.x"
+  },
+  "dependencies": {
+    "vtex.styleguide": "9.x",
+    "vtex.css-handles": "0.x",
+    "vtex.native-types": "0.x",
+    "vtex.device-detector": "0.x",
+    "vtex.react-vtexid": "4.x",
+    "vtex.render-runtime": "8.x",
+    "vtex.store-components": "3.x",
+    "vtex.format-currency": "0.x",
+    "vtex.product-context": "0.x",
+    "vtex.product-list": "0.x",
+    "vtex.checkout-resources": "0.x",
+    "vtex.session-client": "1.x",
+    "vtex.store-resources": "0.x",
+    "vtex.pixel-manager": "1.x",
+    "vtex.product-summary": "2.x",
+    "vtex.structured-data": "0.x",
+    "vtex.search-graphql": "0.x",
+    "vtex.rich-text": "0.x"
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

@@ -1,0 +1,42 @@
+{
+  "store.home": {
+    "blocks": [
+      "flex-layout.row#custom-promotions"
+    ]
+  },
+  "flex-layout.row#custom-promotions": {
+    "children": [
+      "custom-promotions"
+    ],
+    "props": {
+      "fullWidth": false,
+      "preventHorizontalStretch": false,
+      "blockClass": "custom-promotions-row"
+    }
+  },
+    "custom-promotions": {
+        "props": {
+            "title": "Nossos produtos \n**Selecionados para você:**"
+        },
+     "blocks": [
+       "product-summary.shelf"
+     ],
+     "children": [
+       "slider-layout#promotions-slider"
+     ]
+    },
+    "slider-layout#promotions-slider": {
+        "props": {
+            "itemsPerPage": {
+                "desktop": 4,
+                "tablet": 3,
+                "phone": 2
+            },
+            "infinite": true,
+            "fullWidth": true,
+            "showNavigationArrows": "always",
+            "showPaginationDots": "always",
+            "blockClass":"promotions-slider"
+        }
+    }
+}

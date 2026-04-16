@@ -1,0 +1,29 @@
+.listPriceValue {
+   font-size: .875rem;
+    color: #999;
+}
+.sellingPrice {
+   font-size: 17px;
+    color: #999;
+    font-weight: 700;
+}
+.installments--shelf-intallments {
+    color: #525252;
+    font-size: .875rem;
+}
+.installmentsNumber--shelf-intallments {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: none;
+}
+.installmentsNumber::after {
+    content: "x";
+    font-size: 1rem;
+    font-weight: 700
+}
+
+.currencyContainer--shelf-intallments {
+   font-size: 1rem;
+    font-weight: 700;
+    text-transform: none;
+}

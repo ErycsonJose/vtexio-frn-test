@@ -1,0 +1,64 @@
+.triggerContainer {
+    background-color: #fff;
+    border: 0;
+    box-shadow: 5px 8.7px 16px 0 rgba(0, 0, 0, .5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+}
+.triggerContainer--quickview {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='24'%3E%3Cpath fill='%23999' fill-rule='evenodd' d='M21.286 23.77H.139L2.403 4.974h3.099C5.87 2.319 8.053.273 10.713.273c2.663 0 4.842 2.046 5.211 4.701h3.098l2.264 18.796zM10.713 1.842c-1.826 0-3.331 1.346-3.685 3.132h7.369c-.35-1.786-1.859-3.132-3.684-3.132zM3.602 6.537L1.651 22.202h18.127L17.89 6.537H3.602zm10.511 3.916c-.627 0-1.132-.524-1.132-1.173 0-.651.505-1.174 1.132-1.174.623 0 1.132.523 1.132 1.174 0 .649-.509 1.173-1.132 1.173zm-6.797 0c-.627 0-1.136-.524-1.136-1.173 0-.651.509-1.174 1.136-1.174.623 0 1.132.523 1.132 1.174 0 .649-.509 1.173-1.132 1.173zm0 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    font-size: 0;
+    height: 60px;
+    width: 60px !important;
+    background-color: #fff;
+    border-radius: 50%;
+
+    &:hover {
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='24'%3E%3Cpath fill='%23C3D153' fill-rule='evenodd' d='M21.286 23.77H.139L2.403 4.974h3.099C5.87 2.319 8.053.273 10.713.273c2.663 0 4.842 2.046 5.211 4.701h3.098l2.264 18.796zM10.713 1.842c-1.826 0-3.331 1.346-3.685 3.132h7.369c-.35-1.786-1.859-3.132-3.684-3.132zM3.602 6.537L1.651 22.202h18.127L17.89 6.537H3.602zm10.511 3.916c-.627 0-1.132-.524-1.132-1.173 0-.651.505-1.174 1.132-1.174.623 0 1.132.523 1.132 1.174 0 .649-.509 1.173-1.132 1.173zm-6.797 0c-.627 0-1.136-.524-1.136-1.173 0-.651.509-1.174 1.136-1.174.623 0 1.132.523 1.132 1.174 0 .649-.509 1.173-1.132 1.173zm0 0z'/%3E%3C/svg%3E");
+    }
+}
+.paper--quickview {
+    max-width: 1200px;
+    width: 100%;
+    padding: 1rem;
+}
+.contentContainer--quickviewContent{
+    :global(.vtex-store-components-3-x-productBrand){
+        font-size: 2.188rem;
+        color: #2e2213;
+    }
+    :global(.vtex-product-price-1-x-listPrice){
+        display: flex;
+        align-items: center;
+    }
+    :global(.vtex-product-price-1-x-listPriceValue){
+        color: #ccc;
+        font-size: .875rem;
+        font-weight: 500;
+        margin-right: 15px;
+    }
+    :global(.vtex-product-price-1-x-sellingPrice) {
+        color: #c3d153;
+        font-size: 2.188rem;
+        font-weight: 500;
+    }
+
+    :global(.vtex-product-price-1-x-savings),
+    :global(.vtex-product-price-1-x-sellerNameContainer) {
+        color: #525252;
+        display: block;
+        font-size: .875rem;
+        margin-top: .25rem;
+    }
+    :global(.vtex-product-price-1-x-savingsValue),
+    :global(.vtex-product-price-1-x-sellerName) {
+       color: #c3d153;
+        font-weight: 600;
+    }
+}

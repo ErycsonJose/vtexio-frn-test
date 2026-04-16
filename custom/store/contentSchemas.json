@@ -1,0 +1,15 @@
+{
+  "definitions": {
+    "CustomPromotions":{
+        "type":"object",
+        "properties": {
+            "title": {
+                "title": "Titulo",
+                "type":"string",
+                "$ref": "app:vtex.native-types#/definitions/richText",
+                "default":null
+            }
+        }
+    }
+  }
+}
