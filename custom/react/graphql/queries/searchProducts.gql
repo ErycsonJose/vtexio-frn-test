@@ -8,6 +8,10 @@ query SearchProducts($selectedFacets: [SelectedFacetInput],$orderBy: String,$fro
       link
       linkText
       brand
+      clusterHighlights{
+        id
+        name
+      }
       items {
         name
         itemId
@@ -23,6 +27,7 @@ query SearchProducts($selectedFacets: [SelectedFacetInput],$orderBy: String,$fro
         sellers {
           sellerId
           sellerName
+          sellerDefault
           commertialOffer {
             Installments(criteria: MAX) {
               Value
@@ -34,6 +39,12 @@ query SearchProducts($selectedFacets: [SelectedFacetInput],$orderBy: String,$fro
             PriceWithoutDiscount
             ListPrice
             taxPercentage
+            teasers {
+              name
+            }
+            discountHighlights {
+              name
+            }
           }
         }
       }

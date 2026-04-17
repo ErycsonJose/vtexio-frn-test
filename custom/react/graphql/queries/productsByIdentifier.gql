@@ -7,6 +7,10 @@ query ProductsByIdentifier($field: ProductUniqueIdentifierField!,$values: [ID!])
       link
       linkText
       brand
+      clusterHighlights{
+        id
+        name
+      }
       items {
         name
         itemId
@@ -22,6 +26,7 @@ query ProductsByIdentifier($field: ProductUniqueIdentifierField!,$values: [ID!])
         sellers {
           sellerId
           sellerName
+          sellerDefault
           commertialOffer {
             Installments(criteria: MAX) {
               Value
@@ -33,6 +38,12 @@ query ProductsByIdentifier($field: ProductUniqueIdentifierField!,$values: [ID!])
             PriceWithoutDiscount
             ListPrice
             taxPercentage
+            teasers {
+              name
+            }
+            discountHighlights {
+              name
+            }
           }
         }
       }

@@ -57,8 +57,6 @@
 }
 .tabListWrapper::-webkit-scrollbar-button{
     display: none;
-    height: 0;
-    width: 0;
 }
 
 .tabList {
@@ -88,7 +86,7 @@
     border-image: initial;
     border-radius: 0px;
     cursor: pointer;
-    white-space: nowrap;
+    white-space: normal;
     scroll-snap-align: start;
     flex: 0 0 auto;
 }

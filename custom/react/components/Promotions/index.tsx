@@ -25,9 +25,15 @@ const Promotions = ({
 
   if (error || !promotions.length) return null;
 
+  const filterPromotions = promotions.filter((promo) =>
+    Object.values(promo.scope).some(
+      (scopeArray) => Array.isArray(scopeArray) && scopeArray.length > 0,
+    ),
+  );
+
   return (
     <PromotionTabList
-      promotions={promotions}
+      promotions={filterPromotions}
       ProductSummary={ProductSummary}
       title={title}
     >

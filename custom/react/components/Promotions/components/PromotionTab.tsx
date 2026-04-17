@@ -85,7 +85,11 @@ export const PromotionTab = ({
   if (loading) return <PromotionTabSkeleton />;
 
   if (error || !products?.length) {
-    return <div>Nenhum produto encontrado para esta promoção.</div>;
+    return (
+      <div style={{ textAlign: 'center' }}>
+        Nenhum produto encontrado para esta promoção.
+      </div>
+    );
   }
 
   return (
