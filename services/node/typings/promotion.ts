@@ -23,10 +23,14 @@ export interface PromotionDetail {
   endDateUtc?: string;
   paymentsMethods: Array<{ id: string; name: string }>;
   collections: Array<{ id: string; name: string }>;
+  collections1BuyTogether: Array<{ id: string; name: string }>;
+  collections2BuyTogether: Array<{ id: string; name: string }>;
   brands: Array<{ id: string; name: string }>;
   products: Array<{ id: string; name: string }>;
   skus: Array<{ id: string; name: string }>;
   categories: Array<{ id: string; name: string }>;
+  listSku1BuyTogether: Array<{ id: string; name: string }>;
+  listSku2BuyTogether: Array<{ id: string; name: string }>;
 }
 
 export interface ActivePromotion {

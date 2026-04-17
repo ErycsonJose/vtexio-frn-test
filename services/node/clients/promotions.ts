@@ -15,7 +15,7 @@ export class PromotionsClient extends JanusClient {
         ...options?.headers,
         'Content-Type': 'application/json',
         'X-Vtex-Use-Https': 'true',
-        VtexIdclientAutCookie: ctx.storeUserAuthToken ?? '',
+        VtexIdclientAutCookie: ctx.authToken ?? '',
       },
     });
   }
@@ -44,11 +44,9 @@ export class PromotionsClient extends JanusClient {
     id: string,
     appConfigs?: AppConfigs,
   ): Promise<PromotionDetail> {
-    const response = await this.http.get<PromotionDetail[]>(
+    return this.http.get<PromotionDetail>(
       `/api/rnb/pvt/calculatorconfiguration/${id}`,
       { headers: this.buildHeaders(appConfigs) },
     );
-
-    return response[0];
   }
 }

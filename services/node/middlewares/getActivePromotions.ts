@@ -44,6 +44,16 @@ function isActive(promo: PromotionSummary): boolean {
 }
 
 function mapToResponse(detail: PromotionDetail): ActivePromotion {
+  const collections = new Set([
+    ...(detail.collections ?? []),
+    ...(detail.collections1BuyTogether ?? []),
+    ...(detail.collections2BuyTogether ?? []),
+  ]);
+  const skus = new Set([
+    ...detail.skus,
+    ...(detail.listSku1BuyTogether ?? []),
+    ...(detail.listSku2BuyTogether ?? []),
+  ]);
   return {
     id: detail.idCalculatorConfiguration,
     name: detail.name,
@@ -51,10 +61,10 @@ function mapToResponse(detail: PromotionDetail): ActivePromotion {
     endDate: detail.endDateUtc ?? '',
     paymentMethods: detail.paymentsMethods ?? [],
     scope: {
-      collections: detail.collections ?? [],
+      collections: [...collections],
       brands: detail.brands ?? [],
       products: detail.products ?? [],
-      skus: detail.skus ?? [],
+      skus: [...skus],
       categories: detail.categories ?? [],
     },
   };

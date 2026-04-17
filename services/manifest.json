@@ -13,9 +13,12 @@
   "credentialType": "absolute",
   "policies": [
     {
+      "name": "GerenciarPromocoesETarifas"
+    },
+    {
       "name": "outbound-access",
       "attrs": {
-        "host": "{accountName}.vtexcommercestable.com.br",
+        "host": "portal.vtexcommercestable.com.br",
         "path": "/api/rnb/*"
       }
     }
