@@ -1,7 +1,7 @@
 {
   "name": "service",
   "vendor": "frncubo",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "title": "Service Example",
   "description": "Reference app for VTEX IO Services",
   "categories": [],
