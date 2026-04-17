@@ -50,7 +50,7 @@
       "blockClass": "quickview",
       "showPaginationDots": true,
       "showNavigationArrows": true,
-      "maxHeight":600,
+      "maxHeight": 445,
       "aspectRatio": {
         "desktop": "auto",
         "phone": "16:9"

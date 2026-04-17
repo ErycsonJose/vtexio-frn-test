@@ -66,6 +66,7 @@ gulp.task("sass", function (done) {
         gulp.src([
             "styles/sass/utils/_mixin.scss",
             "styles/sass/utils/_vars.scss",
+            "styles/sass/utils/_animations.scss",
             pathsStore.styles.styles + fileName,
         ])
             .pipe(concat(fileName))
@@ -89,6 +90,7 @@ gulp.task("watch", function () {
             gulp.src([
                 "styles/sass/utils/_mixin.scss",
                 "styles/sass/utils/_vars.scss",
+                "styles/sass/utils/_animations.scss",
                 pathsStore.styles.styles + fileName,
             ])
                 .pipe(concat(fileName))

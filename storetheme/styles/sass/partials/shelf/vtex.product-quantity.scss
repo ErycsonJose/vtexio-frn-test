@@ -1,0 +1,28 @@
+.summaryContainer--shelfQty {
+    display: flex;
+    justify-content: center;
+    margin-top: .5rem;
+}
+.quantitySelectorContainer {
+    margin-bottom: 0;
+    :global(.vtex-numeric-stepper__input){
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+        font-weight: 700;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 1.2px;
+        color: #404040;
+    }
+    :global(.vtex-numeric-stepper__plus-button ),
+    :global(.vtex-numeric-stepper__minus-button){
+        height: 25px;
+        cursor: pointer;
+        transition: .4s;
+        max-width: 21px;
+        width: 100%;
+        color: #404040 !important;
+    }
+}

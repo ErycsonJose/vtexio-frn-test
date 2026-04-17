@@ -60,7 +60,15 @@
         "highlightNames": ["Lançamentos","NOVO!"]
       }
     },
-    "children": ["product-highlight-text"]
+    "children": ["product-highlight-wrapper"]
+  },
+  "product-highlight-wrapper": {
+    "props": {
+      "blockClass": "collection"
+    },
+    "children": [
+      "product-highlight-text"
+    ]
   },
   "product-highlight-text": {
     "props": {
@@ -72,7 +80,7 @@
     "children":[
         "product-summary-brand",
         "product-summary-name",
-        "product-summary-quantity",
+        "product-summary-quantity#shelf-qty",
         "product-summary-space",
         "flex-layout.row#priceGroup",
         "product-installments#shelf-installments"
@@ -104,10 +112,13 @@
   },
   "product-summary-quantity":{
     "props":{
-        "warningQuantityThreshold":1,
-        "showUnit":false,
+        "showLabel":false
+    }
+  },
+  "product-summary-quantity#shelf-qty":{
+    "props":{
         "showLabel":false,
-        "quantitySelectorStep":"singleUnit"
+        "blockClass":"shelfQty"
     }
   }
 }

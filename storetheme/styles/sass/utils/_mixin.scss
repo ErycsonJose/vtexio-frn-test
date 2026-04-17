@@ -57,7 +57,7 @@
     }
 }
 
-/* Media Query M3 */
+/* Media Query */
 
 @mixin mq($width, $type: min) {
     @if map_has_key($grid-breakpoints, $width) {
